@@ -1,0 +1,337 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  color: #6c6b6b;
+}
+
+h1{
+	text-align: center;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+section.slice {
+    padding: 46px 0;
+    position: relative;
+    background-color: #EAEBED;
+}
+
+.btn-base-1 {
+    background-color: #1f3a93;
+    border: 1px solid #1f3a93;
+    color: #ffffff;
+}
+
+.btn-lg {
+    font-size: 12px;
+    padding: 16px 36px;
+}
+
+.btn {
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.col-sm-12 {
+    width: 100%;
+}
+
+.col-md-12 {
+    width: 100%;
+}
+
+.post_image_form {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.col-md-offset-3 {
+    margin-left: 25%;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+.col-md-offset-4 {
+    margin-left: 33%;
+}
+
+.col-md-4 {
+    width: 33%;
+}
+
+.form-user.style-1 .form-body {
+    padding: 30px;
+    background-color: #ffffff;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+a {
+  text-decoration: none;
+}
+
+
+#header_container h1, nav, h2, #main_visual, footer {
+  font-family: 'Chalkduster','Bradley Hand','Courier','Segoe Print',　sans-serif;
+}
+
+.header{
+	background-color: #848282;
+}
+
+#header_container {
+  text-align: center;
+  padding: 15px 0;
+  width: 90%;
+  max-width: 1296px;
+  min-width: 732px;
+  margin: 0 auto;
+  position: relative;
+}
+#header_container h1 {
+  font-size: 32px;
+}
+#social {
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+#social i {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul {
+  text-align: center;
+  padding: 10px 0;
+  max-width: 1440px;
+  min-width: 732px;
+  margin: 0 auto;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 3%
+}
+
+#main_visual {
+  width: 100%;
+  max-width: 1440px;
+  min-width: 732px;
+  margin: 0 auto;
+  height: 350px;
+  background-image: url(image5.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.black_mask {
+  width: 40%;
+  min-width: 350px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 105px;
+  text-align: center;
+}
+#main_visual p {
+  color: #fff;
+  text-shadow: 0 5px 7px #000;
+}
+.mv_text {
+  font-size: 18px;
+  line-height: 2.0;
+}
+.mv_name {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+#main_container {
+  width: 800px;
+  padding: 70px 0;
+  margin: 0 auto;
+}
+#main_container h2 {
+  border-bottom: 8px solid #f7f7f7;
+  text-align: center;
+  line-height: 0.6;
+}
+
+#recent_blogs {
+  width: 67%;
+  float: left;
+  margin-right: 6%;
+}
+.blog_item {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+.blog_item:last-child {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.blog_item_box {
+  padding: 50px 2% 0;
+}
+.blog_item_box p {
+  display: inline-block;
+  margin: 15px 5px 20px 0;
+  font-size: 10px;
+}
+.blog_image {
+  width: 49%;
+  height: 180px;
+  float: left;
+  background-position: center;
+  background-size: cover;
+}
+.blog_text {
+  width: 49%;
+  height:180px;
+  float: left;
+  padding: 30px 0 0 25px;
+}
+.blog_text h3 {
+  font-size: 18px;
+}
+.blog_text p {
+  margin-top: 13px;
+  font-size:  12px;
+}
+.category {
+  padding: 5px 8px;
+  background-color: #acabab;
+  color: #fff;
+  display: inline-block;
+  border-radius: 3px;
+}
+#pagination {
+  text-align: center;
+  margin-top: 50px;
+}
+#pagination p {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  color: #fff;
+  background-color: #acabab;
+  padding-top: 2px;
+  border-radius: 3px;
+  margin: 0 5px;
+}
+
+p.single_text {
+  font-size: 15px;
+  padding-left: 10px;
+  margin-bottom: 0;
+}
+.blog_item_box img {
+  width: 100%;
+}
+.author_case {
+  margin-top: 30px;
+  border-top: 1px solid #f7f7f7;
+  padding: 30px 10px;
+}
+
+.author_text {
+  width: calc(100% - 110px);
+  float: left;
+  padding: 0 0 0 20px;
+}
+.author_text p {
+  margin: 0;
+}
+p.author_name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#sidebar {
+  width: 27%;
+  float: left;
+}
+.sidebar_contents {
+  padding: 50px 3%;
+}
+#popular .sidebar_contents p, #categories .sidebar_contents p {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f7f7f7;
+  margin-bottom: 5px;
+}
+#popular .sidebar_contents p:last-child, #categories .sidebar_contents p:last-child {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+#instagram .sidebar_contents div {
+  width: 48%;
+  padding-top: 48%;
+  background-size: cover;
+  background-position: center;
+  float: left;
+}
+#instagram .sidebar_contents div:nth-child(odd) {
+  margin: 0 4% 4% 0;
+}
+#instagram .sidebar_contents div:nth-child(1) {
+  background-image: url(image1.jpeg);
+}
+#instagram .sidebar_contents div:nth-child(2) {
+  background-image: url(image2.jpeg);
+}
+#instagram .sidebar_contents div:nth-child(3) {
+  background-image: url(image3.jpeg);
+}
+#instagram .sidebar_contents div:nth-child(4) {
+  background-image: url(image4.jpeg);
+}
+#instagram .sidebar_contents div:nth-child(5) {
+  background-image: url(image7.jpeg);
+}
+#instagram .sidebar_contents div:nth-child(6) {
+  background-image: url(image6.jpeg);
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #848282;
+}
+footer p {
+  color: #fff;
+}

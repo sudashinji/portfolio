@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'  %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="header" id="header">
+      <nav class="navbar navbar-main navbar-shadow" role="navigation" id="slide-nav">
+        <div class="container relative">
+          <div class="navbar-header">
+          </div>
+          <div id="slidemenu">
+  <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+    <% if user_signed_in? %>
+      <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to 'New Blog', new_post_image_path %></li>
+      <li><%= link_to 'Home', post_images_path %></li>
+      <% else %>
+      <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <li><%= link_to "Sign In", new_user_session_path %></li>
+    <% end %>
+  </ul>
+</div>
+        </div>
+      </nav>
+    </div>
+  
+    <%= yield %>
+
+   <footer class="footer style-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="col">
+              <br>
+              <p class="no-margin" style="font-size: 20px;">
+                portfolio
+              <br>
+              
+          </p>
+              
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="col">
+              <h4>Link</h4>
+              <ul>
+                <li>
+                  <a href="" title="License informations">プライバシーポリシー</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
