@@ -1,0 +1,85 @@
+<header>
+    <section id="header_container">
+      <h1 id="logo"><a href="/">CARAVAN</a></h1>
+      <div id="social">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        <i class="fa fa-instagram" aria-hidden="true"></i>      
+      </div>
+    </section>
+  </header>
+  <main>
+    <div id="main_visual">
+      <div class="black_mask">
+        <p class="mv_text">Hello,World<br>You say good bye<br>I say hello</p>
+        <p class="mv_name">CARAVAN Blogs </p>
+      </div>
+    </div>
+    <article id="main_container" class="clearfix">
+      <section id="recent_blogs">
+        <h2>Recent Blogs</h2>
+        <div class="blog_item_box">
+          <% @post_images.each do |post_image| %>
+            <%= link_to post_image_path(post_image) do %>
+          <span class="category"><%= attachment_image_tag post_image, :image, fallback: "no_image.jpg" %></span>
+            <div class="blog_item clearfix">
+              <div class="blog_image"></div>
+              <section class="blog_text">
+                <h3><%= link_to post_image.blog_name, blog_path(post_image) %></h3>
+                <p><%= post_image.created_at %></p>
+                <p><%= post_image.caption %></p>
+                <% end %>
+              </section>
+            </div>
+          <% end %>
+        </div>
+        <div id="pagination">
+          <p><<</p>
+          <p><</p>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>></p>
+          <p>>></p>
+        </div>
+      </section>
+      <section id="sidebar">
+        <section id="popular">
+          <h2>Popular</h2>
+          <div class="sidebar_contents">
+            <p>Text<br>Text</p>
+            <p>Title<br>Title</p>
+            <p>Body<br>Body</p>
+            <p>Category<br>Category</p>
+            <p>Caption<br>Caption</p>
+          </div>
+        </section>
+        <section id="instagram">
+          <h2>Instagram</h2>
+          <div class="sidebar_contents clearfix">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </section>
+        <section id="categories">
+          <h2>categories</h2>
+          <div class="sidebar_contents">
+            <p>Text</p>
+            <p>Title</p>
+            <p>Body</p>
+            <p>Category</p>
+            <p>Caption</p>
+            <p>Image</p>
+            <p>Introduction</p>
+          </div>
+        </section>
+      </section>
+    </article>
+  </main> 
+  <footer>
+    <p>©Thank You For Reading</p>
+  </footer>
